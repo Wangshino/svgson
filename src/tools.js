@@ -55,10 +55,12 @@ export const escapeText = text => {
 }
 
 export const escapeAttr = attr => {
-  return String(attr)
-    .replace(/&/g, '&amp;')
-    .replace(/'/g, '&apos;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
+  return (
+    String(attr)
+      // .replace(/&/g, '&amp;')
+      .replace(/'/g, '&apos;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+  )
 }
